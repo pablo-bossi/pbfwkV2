@@ -1,0 +1,1 @@
+<p>Site: <?php echo $this->site; ?></p><p>Message: <?php echo $this->message; ?></p><p>Fwk: <?php echo $this->fwkName; ?></p><p><?php echo $this->extra; ?></p>

@@ -1,0 +1,1 @@
+<html><head><title><?php echo $this->site;?></title></head><body><?php echo $this->renderSubModule($this->childModule); ?></body></html>

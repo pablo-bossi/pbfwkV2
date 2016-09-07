@@ -1,0 +1,1 @@
+<html><head><title><?php echo $this->site; ?></title></head><body><h1><?php echo $this->message; ?></h1><p>Page generatd with <?php echo $this->fwkName; ?></p></body></html>
