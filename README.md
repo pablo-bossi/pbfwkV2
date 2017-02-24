@@ -1,6 +1,3 @@
-GoPR Site
-=========
-
 Folders Structure:
 ==================
 
