@@ -112,4 +112,25 @@ PHP Validators
 The fwk includes a set of classes to be used as validators for different conditions, check the example model included for the usage.
 The models defines a method _setValidatonRules which allows to set validation rules for the different attributes.
 
+Apache setup
+=============
+For this framework to work all urls but static files should be pointed to the main.php file, so you need to have mod_rewrite module installed and setup some rewrite rules.
+An example of setup can be found below:
 
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ServerName <Your site url>
+        DocumentRoot <Path to where the site is located>
+
+        <Directory "<Path to where the site is located>">
+                Options FollowSymLinks
+                AllowOverride all
+                RewriteEngine on
+                Require all granted
+
+                RewriteCond %{REQUEST_URI} !.*\.(ico|png|gif|jpg|css|js|ttf|svg|crx|eot|woff)$ [NC]
+                RewriteRule ^.* main.php [QSA,L]
+        </Directory>
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
