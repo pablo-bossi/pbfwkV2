@@ -117,7 +117,7 @@ Apache setup
 For this framework to work all urls but static files should be pointed to the main.php file, so you need to have mod_rewrite module installed and setup some rewrite rules.
 An example of setup can be found below:
 
-"<VirtualHost *:80>
+<VirtualHost *:80>
         ServerAdmin webmaster@localhost
         ServerName <Your site url>
         DocumentRoot <Path to where the site is located>
@@ -133,4 +133,4 @@ An example of setup can be found below:
         </Directory>
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>"
+</VirtualHost>
